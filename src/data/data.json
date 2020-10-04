@@ -1,0 +1,8 @@
+{
+    "PLACE" : {
+        "x": "",
+        "y": "",
+        "o":""
+    },
+    "COMMANDS":["MOVE","LEFT","RIGHT","REPORT"]
+}
