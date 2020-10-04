@@ -2,13 +2,21 @@
 
 const Grid = require('../models/grid');
 
-const Robot = function ({x,y,o}) {
+const Robot = function ({x,y,o,commands}) {
     this.orientation = o;
     this.currentX= x;
     this.currentY= y;
+    this.command = commands;
 }
 
-Robot.prototype.isOffGrid = ()=> Grid().isOff(this.currentX,this.currentY);
+Robot.prototype.isOffGrid = function(){
+    return Grid().isOff(this.currentX,this.currentY);
+} 
+
+Robot.prototype.checkCommand = function(){
+    /* aquí la lógica */
+  return 'not in place';
+} 
 
 Robot.prototype.execInstruction = function (step) {
     if (step !== "F") {
